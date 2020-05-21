@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -104,13 +106,55 @@
     <routinesParameter id="_hRhmsJuWEeqcefeBlmFTgw" name="TalendStringUtil"/>
     <routinesParameter id="_hROrwJuWEeqcefeBlmFTgw" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d9b78947-c7fb-410e-af69-c8faae3d1248"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EoTJet8YghNpx8Cy4Y0WODSEAMDCjjtLWXIQJvPdnryxKPzJTZc0EnWKiC9t+nGqS9Vs9EYN4Hna
-pgu72da3jQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5c8ceaab-5776-4582-9366-b50eaf9945c7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>d+h5uGPYJ3iI7D64D4wYiacI5aEzKsNpAIM2vk+zSuRWmSQf48qgZrNxcAHeDvv3kmx6mPqB+fOh
-oAlm8a8wyg==</DigestValue></Reference></SignedInfo><SignatureValue>eOVibgCcSHhOZ/BggeFxP1Jht7CZhHjeQM/qtt/3R7qV4L3kO4ogUyvnzIJjT+DlAoRX51hcHHPu
-nylJsctxRdpKeNY9dY19fkqOSb1CQA/8S0neO45ZLwBUHpVKWvdop2YahEr7zyui9ANECuD4pW0K
-1y34oyzB7DuzR0BXQ4p1U5GMbMvQBXnIxXUIhShOByqhwRgFzsCQmftx4P6SDIc0fMhGN/HpN34n
-V/mgS2HCorK/DbGuk3CUQYUMl8pYD2V+Y7dMHt1ALZDgilXyaCCsKfjBS7XycoOM7nq5efROgAXF
-Ex7pQRys8mwQYzip9PT0LHGHctx4RYShr/5/Zg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tMongoDBBulkLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMongoDBBulkLoad_1"/>
+    <elementParameter field="DIRECTORY" name="MONGODB_DIR" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_LOCAL_DBPATH" value="false"/>
+    <elementParameter field="DIRECTORY" name="LOCAL_DB_PATH" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_REPLICA_SET" value="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_REPLICA_SET" show="false" value="true"/>
+    <elementParameter field="TEXT" name="REPLICA_NAME" show="false" value="&quot;rep1&quot;"/>
+    <elementParameter field="TABLE" name="REPLICA_SET" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value=""/>
+    <elementParameter field="TEXT" name="DATABASE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_SSL" value="false"/>
+    <elementParameter field="CHECK" name="DROP_COLLECTION_CREATE" value="false"/>
+    <elementParameter field="CHECK" name="REQUIRED_AUTHENTICATION" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTHENTICATION_MECHANISM" show="false" value="MONGODBCR_MEC"/>
+    <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" show="false" value="&quot;mongouser@EXAMPLE.COM&quot;"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" show="false" value="&quot;mongodb&quot;"/>
+    <elementParameter field="TEXT" name="KRB_HOST_NAME" show="false" value="&quot;talend-mongo&quot;"/>
+    <elementParameter field="TEXT" name="KRB_AUTH_DATABASE" show="false" value="&quot;$external&quot;"/>
+    <elementParameter field="FILE" name="DATA" value="&quot;C:/Users/student/workspace/in.csv&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="FILE_TYPE" value="csv"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="TABLE" name="UPSERT_FIELDS" show="false"/>
+    <elementParameter field="CHECK" name="HEADERLINE" value="false"/>
+    <elementParameter field="CHECK" name="IGNORE_BLANKS" value="false"/>
+    <elementParameter field="CHECK" name="JSON_ARRAY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_LOG" value="false"/>
+    <elementParameter field="TABLE" name="ADDITIONAL_ARGS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMongoDBBulkLoad_1"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMongoDBBulkLoad_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_10d716a3-1428-4c33-a6cf-649abd629170"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>emLzf8UvwjR6OMRe6NOl7D+A398HL7BQUb0Nsd+0LmullPkKhfdigT6EYDzNpYqxoqeuCC7m3wm9
+0fUbDpqi5Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_abd89d49-17e5-4e3a-8370-790dd5a6a802"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZcB0CgpQAZ6CQ2rpibSvG4JVGMJvpxoMwqcEjMIPum96vzLrMDuvoaGwTDvZ1H+9HbCiWmgf5qs0
+FsCqrTjosQ==</DigestValue></Reference></SignedInfo><SignatureValue>SvKPwXjBYuw4CLydGxc2liYXea7RT14DpcZqgM+mOTWFKpIXnCx0hUNY0gAeCs7j7cvTQG/LgCHf
+vi8SXtxnC19J3qaWOMpu+oOnosiA2nY3pgltb0tbLdqSfaHjDW3YwiktDmCYrEfgdozxiFTukJ91
+tU3PDhA2fStQv7qXJNFZyrLawWvbovMiYHjFdDGVVuJUigF5WB5Rc81P/NikvyelpJwx47ztOfZD
+33Vn9DJjq5P6l8R7K8CG0PNfMqmI6z5QhWeqqV6rXwlfEJbgoW1L2dI531B8mAs1biyPh2xZT+a2
+W05uodkSGTkjNtFwQrBAC5S5ZxdK5C73gGRarQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -134,4 +178,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5c8ceaab-5776-4582-9366-b50eaf9945c7" Target="#_d9b78947-c7fb-410e-af69-c8faae3d1248"><Timestamp>2020-05-21 19:34:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_abd89d49-17e5-4e3a-8370-790dd5a6a802" Target="#_10d716a3-1428-4c33-a6cf-649abd629170"><Timestamp>2020-05-21 19:35:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
